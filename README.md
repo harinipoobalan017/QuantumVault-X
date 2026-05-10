@@ -55,7 +55,7 @@ Files are analyzed for malware signatures and suspicious entropy patterns.
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](images/Dashboard.png)
+![Dashboard](images/dashboard.png)
 
 ### Ledger Verification
 ![Ledger](images/ledger.png)
