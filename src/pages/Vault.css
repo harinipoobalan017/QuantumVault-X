@@ -1,0 +1,251 @@
+/* ===== Vault Page ===== */
+
+.vault-overview {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.vault-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.vault-stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.storage-bar-container {
+  padding: 24px;
+}
+
+.storage-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+}
+
+.storage-numbers {
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+}
+
+/* Upload zone */
+.upload-zone {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 60px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out-expo);
+  border-style: dashed;
+}
+
+.upload-zone:hover,
+.upload-zone.dragging {
+  border-color: var(--accent-cyan);
+  background: rgba(0, 229, 255, 0.04);
+  box-shadow: 0 0 60px rgba(0, 229, 255, 0.08);
+}
+
+.upload-zone h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.upload-zone p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.algo-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.algo-selector label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.algo-chip {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s;
+}
+
+.algo-chip.active {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  background: rgba(0, 229, 255, 0.08);
+}
+
+.algo-chip:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+}
+
+/* Encrypt modal */
+.encrypt-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  padding: 40px 60px;
+  text-align: center;
+  min-width: 360px;
+}
+
+.encrypt-modal h3 {
+  margin: 12px 0 4px;
+}
+
+.encrypt-modal p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-family: var(--font-mono);
+}
+
+/* File list */
+.file-list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.file-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+.file-list-header h3 {
+  font-size: 1.1rem;
+}
+
+.file-count {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.file-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(0, 229, 255, 0.08);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 2px;
+}
+
+.file-meta {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-secure {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-emerald);
+}
+
+.badge-scanning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-amber);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.badge-pending {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-blue);
+}
+
+.file-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.3s;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+}
+
+.icon-btn.danger:hover {
+  background: rgba(244, 63, 94, 0.1);
+  color: var(--accent-rose);
+}
+
+@media (max-width: 768px) {
+  .vault-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .file-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .file-actions {
+    align-self: flex-end;
+  }
+}
